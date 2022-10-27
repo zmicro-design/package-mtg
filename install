@@ -4,6 +4,8 @@ set -e
 
 VERSION=v2.1.7
 
+echo "DEBUG: 1: $1 - 2: $2 - @: $@"
+
 if [ "$1" = "ONE_LINE" ]; then
   which zmicro >>/dev/null 2>&1
   if [ $? -ne 0 ]; then
