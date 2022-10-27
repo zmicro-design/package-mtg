@@ -11,7 +11,7 @@ if [ "$ONE_LINE" = "true" ]; then
   fi
 
   export ONE_LINE=""
-  zmicro package install lazydocker
+  zmicro package install mtg
   exit $?
 fi
 
