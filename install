@@ -72,11 +72,12 @@ run() {
 echo "DEBUG: 1: $1 - 2: $2 - @: $@"
 
 if [ "$1" = "ONE_LINE" ]; then
-echo "iiiii on line"
-  # command -v zmicro # >>/dev/null 2>&1
-  # if [ $? -ne 0 ]; then
-  #   curl -o- https://raw.githubusercontent.com/zcorky/zmicro/master/install | bash
-  # fi
+  set +e
+  
+  command -v zmicro # >>/dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    curl -o- https://raw.githubusercontent.com/zcorky/zmicro/master/install | bash
+  fi
 
   zmicro package install mtg
 else
