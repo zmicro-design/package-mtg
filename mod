@@ -1,2 +1,2 @@
 VERSION=v1.0.0
-DESCRIPTION="Package mtg - The lazier way to manage everything docker"
+DESCRIPTION="Package mtg - Highly opinionated MTPROTO proxy for Telegram"
