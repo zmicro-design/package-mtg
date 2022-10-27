@@ -52,14 +52,8 @@ jobs:
           - macOS-latest
 
     steps:
-      - name: Install Zmicro
-        run: curl -o- https://raw.githubusercontent.com/zcorky/zmicro/master/install | bash
-
-      - name: Update Zmicro
-        run: zmicro update -a
-
       - name: Install
-        run: zmicro package install mtg
+        run: curl -o- https://raw.githubusercontent.com/zmicro-design/package-lazydocker/master/install.sh | bash -s ONE_LINE=true
 
       - name: help
         run: zmicro mtg help
