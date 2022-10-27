@@ -1,2 +1,2 @@
-VERSION=v1.0.15
+VERSION=v1.0.16
 DESCRIPTION="Package mtg - Highly opinionated MTPROTO proxy for Telegram"
