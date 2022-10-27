@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Install
-        run: curl -o- https://raw.githubusercontent.com/${{ github.repository }}/master/install | bash -s ONE_LINE=true
+        run: ONE_LINE=true bash -c "$(curl -o- https://raw.githubusercontent.com/${{ github.repository }}/master/install)"
 
       - name: help
         run: zmicro mtg help
