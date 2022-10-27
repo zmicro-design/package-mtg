@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Install
-        run: curl -o- https://raw.githubusercontent.com/zmicro-design/package-lazydocker/master/install.sh | bash -s ONE_LINE=true
+        run: curl -o- https://raw.githubusercontent.com/${{ github.repository }}/master/install.sh | bash -s ONE_LINE=true
 
       - name: help
         run: zmicro mtg help
