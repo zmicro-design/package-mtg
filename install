@@ -4,13 +4,12 @@ set -e
 
 VERSION=v2.1.7
 
-if [ "$ONE_LINE" = "true" ]; then
+if [ "$1" = "ONE_LINE" ]; then
   which zmicro >>/dev/null 2>&1
   if [ $? -ne 0 ]; then
     curl -o- https://raw.githubusercontent.com/zcorky/zmicro/master/install | bash
   fi
 
-  export ONE_LINE=""
   zmicro package install mtg
   exit $?
 fi
